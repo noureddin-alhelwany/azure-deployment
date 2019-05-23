@@ -1,6 +1,6 @@
 pipeline {
     agent {
-        image 'ubuntu:18.04'
+docker { image 'node:7-alpine' }
     }
     stages {
         stage('Build') {
