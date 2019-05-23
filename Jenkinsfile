@@ -1,21 +1,11 @@
 pipeline {
     agent {
-docker { image 'ubuntu:latest' }
+        docker { image 'node:7-alpine' }
     }
     stages {
-        stage('Build') {
-            steps {
-                echo 'Building..'
-            }
-        }
         stage('Test') {
             steps {
-                echo 'Testing..'
-            }
-        }
-        stage('Deploy') {
-            steps {
-                echo 'Deploying....'
+                sh 'node --version'
             }
         }
     }
