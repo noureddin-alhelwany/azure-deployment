@@ -1,6 +1,7 @@
 pipeline {
-    agent any
-
+    agent {
+        image 'ubuntu:18.04'
+    }
     stages {
         stage('Build') {
             steps {
